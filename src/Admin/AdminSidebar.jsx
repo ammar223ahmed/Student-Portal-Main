@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaBook } from 'react-icons/fa';
+// import { FaBook } from 'react-icons/fa';
 import 
 {BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, 
   BsListCheck, BsMenuButtonWideFill, BsFillGearFill}
@@ -24,7 +25,12 @@ function AdminSidebar({openSidebarToggle, OpenSidebar}) {
             </Link>
         </li>
         <li className='sidebar-list-item'>
-            <Link to='/studentlist'  className='flex gap-3'>
+            <Link to='/courses'  className='flex gap-3'>
+            <FaBook size={30}/> Courses
+            </Link >
+        </li>
+        <li className='sidebar-list-item'>
+            <Link to='/ Studentlist'  className='flex gap-3'>
             <BsPeopleFill className='icon'/> Students
             </Link >
         </li>

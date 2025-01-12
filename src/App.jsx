@@ -23,6 +23,8 @@ import SectionList from './components/Sectionlist'
 import AddCourseForm from './components/AddCourse'
 import Alert from './components/Alerts'
 import AdminAlert from './Admin/Adminalerts'
+import Studentlist from './components/Studentlist'
+import StudentDetailPage from './components/StudentDetailPage'
 
 function App() {
 
@@ -59,6 +61,8 @@ function App() {
       <Route path='/adminsidebar' element={<AdminSidebar/>}></Route>
       <Route path='/teacherlist' element={<TeacherList/>}></Route>
       <Route path='/courses' element={ <Courselist /> } ></Route>
+      <Route path='/Studentlist' element={ <Studentlist/> }></Route>
+      <Route path="/student/:id" element={<StudentDetailPage />} />
     <Route path="/course/:courseId/batches" element={<BatchList />} />
     <Route path="/course/:courseId/batch/:batchId/sections" element={<SectionList/>} />
     <Route path='/addcourse' element={ <AddCourseForm/> } ></Route>
