@@ -2,24 +2,8 @@ import React, { useState } from 'react';
 import AdminHeader from '../Admin/AdminHeader';
 import AdminSidebar from '../Admin/AdminSidebar';
 
-const AddCourseForm = () => {
-  const [formData, setFormData] = useState({
-    courseTitle: '',
-    courseCode: '',
-    courseDescription: '',
-    category: '',
-    instructor: '',
-    instructorEmail: '',
-    duration: '',
-    startDate: '',
-    endDate: '',
-    fee: '',
-    modeOfLearning: '',
-    level: '',
-    prerequisites: '',
-    courseMaterials: null,
-    courseImage: null,
-  });
+const AddBatchForm = () => {
+
 
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
@@ -51,44 +35,62 @@ const AddCourseForm = () => {
       <br /><br />
     <form onSubmit={handleSubmit} className='addcourcefrom'>
       <br /> <br />
-      <br />
-      <div className='parent-input-labels '>    
-      <label>Course Title:</label>
+      <br /><br />
+      
+      
+      <div className='parent-input-labels'>    
+      <label>In Progress:</label>
       <input
         type="text"
-        name="courseTitle"
-        value={formData.courseTitle}
-        onChange={handleChange}
-        placeholder="Course Title"
+        name="Progress"
+        // value={formData.instructor}
+        // onChange={handleChange}
+        placeholder="In Progress"
         required
       />
       </div>
       <br />
-      
-     
+
       <div className='parent-input-labels'>    
-      <label>Course Description:</label>
-      <textarea
-        name="courseDescription"
-        value={formData.courseDescription}
-        onChange={handleChange}
-        placeholder="Course Description"
-        required
-      ></textarea>
-      </div>
-      <br />
-      <div className='parent-input-labels'>    
-      <label>Course Thumbnail:</label>
+      <label>Batch:</label>
       <input
-        type="file"
-        name="courseImage"
-        onChange={handleChange}
-        accept="image/*"
+        type="number"
+        name="instructor"
+        // value={formData.instructor}
+        // onChange={handleChange}
+        placeholder="Batch"
+        required
       />
       </div>
+     <br />
+      <div className='parent-input-labels'>    
+      <label>Total Teachers:</label>
+      <input
+        type="number"
+        name="instructor"
+        // value={formData.instructor}
+        // onChange={handleChange}
+        placeholder="Teachers"
+        required
+      />
+      </div>
+      <br />
+      <div className='parent-input-labels'>    
+      <label>Total Section:</label>
+      <input
+        type="text"
+        name="duration"
+        // value={formData.duration}
+        // onChange={handleChange}
+        placeholder="Duration"
+        required
+      />
+      </div>
+      <br />
+     
       <br />
        <div className='add-course-btn-parent'>
-      <button type="submit" className='add-course-submit'>Add Course</button>
+      <button type="submit" className='add-course-submit'>Add Batch</button>
       </div>
     </form>
     </div>
@@ -98,4 +100,4 @@ const AddCourseForm = () => {
   );
 };
 
-export default AddCourseForm;
+export default AddBatchForm;

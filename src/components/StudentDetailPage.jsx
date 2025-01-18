@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import AdminHeader from "../Admin/AdminHeader";
+import AdminSidebar from "../Admin/AdminSidebar";
 
 
 const StudentDetailPage = () => {
@@ -18,8 +20,18 @@ const StudentDetailPage = () => {
     );
   }
 
+    const [openSidebarToggle, setOpenSidebarToggle] = useState(false)  
+                const OpenSidebar = () => {
+                  setOpenSidebarToggle(!openSidebarToggle)
+                }
+
   return (
-    <div className="admin-container">
+    <div>
+    <AdminHeader OpenSidebar={OpenSidebar}/>
+    <AdminSidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+  <br /> <br />
+  
+    <div className="student-detail-parent">
       <h1 className="admin-title">Student Details</h1>
       <div className="student-details">
         <p><strong>Name:</strong> {student.name}</p>
@@ -32,6 +44,7 @@ const StudentDetailPage = () => {
       <button onClick={() => navigate(-1)} className="back-btn">
         Back to List
       </button>
+    </div> 
     </div>
   );
 };

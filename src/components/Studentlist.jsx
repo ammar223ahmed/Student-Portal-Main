@@ -120,7 +120,7 @@ const Studentlist = () => {
                   <td>{student.course}</td>
                   <td>{student.batch}</td>
                   <td>{student.enrolled ? "Yes" : "No"}</td>
-                  <td>
+                  <td className="flex">
                     <button
                       onClick={() =>
                         navigate(`/student/${student.id}`, { state: student })

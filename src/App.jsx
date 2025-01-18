@@ -25,6 +25,8 @@ import Alert from './components/Alerts'
 import AdminAlert from './Admin/Adminalerts'
 import Studentlist from './components/Studentlist'
 import StudentDetailPage from './components/StudentDetailPage'
+import AddBatchForm from './components/AddBatch'
+import TeacherDetail from './components/TeacherDetail'
 
 function App() {
 
@@ -60,12 +62,14 @@ function App() {
       <Route path='/adminheader' element={<AdminHeader/>}></Route>
       <Route path='/adminsidebar' element={<AdminSidebar/>}></Route>
       <Route path='/teacherlist' element={<TeacherList/>}></Route>
-      <Route path='/courses' element={ <Courselist /> } ></Route>
+      <Route path='/teacher/:teacherId' element={<TeacherDetail/>}></Route>
       <Route path='/Studentlist' element={ <Studentlist/> }></Route>
       <Route path="/student/:id" element={<StudentDetailPage />} />
-    <Route path="/course/:courseId/batches" element={<BatchList />} />
+      <Route path='/courses' element={ <Courselist /> } ></Route>
+    <Route path="/batch-list/:courseId" element={<BatchList />} />
     <Route path="/course/:courseId/batch/:batchId/sections" element={<SectionList/>} />
     <Route path='/addcourse' element={ <AddCourseForm/> } ></Route>
+    <Route path='/addbatch' element={<AddBatchForm/>}></Route>
     <Route path='/alerts' element={ <Alert/> } ></Route>
     <Route path='/adminalert' element={<AdminAlert/>}></Route>
     </Routes>

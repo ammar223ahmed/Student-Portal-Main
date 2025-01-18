@@ -30,7 +30,7 @@ function AdminSidebar({openSidebarToggle, OpenSidebar}) {
             </Link >
         </li>
         <li className='sidebar-list-item'>
-            <Link to='/ Studentlist'  className='flex gap-3'>
+            <Link to='/Studentlist'  className='flex gap-3'>
             <BsPeopleFill className='icon'/> Students
             </Link >
         </li>
