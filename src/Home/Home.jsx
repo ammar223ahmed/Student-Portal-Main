@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div>
    <Header   OpenSidebar={OpenSidebar} />
-   <Sidebar  openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} />
+   {/* <Sidebar  openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} /> */}
     <main className='mainhome-container'>
         <br /> <br />
   {/* Main Home Page Section No 1 */}

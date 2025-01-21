@@ -27,6 +27,8 @@ import Studentlist from './components/Studentlist'
 import StudentDetailPage from './components/StudentDetailPage'
 import AddBatchForm from './components/AddBatch'
 import TeacherDetail from './components/TeacherDetail'
+import AddSectionForm from './components/AddSection'
+import AddTeacherForm from './components/AddTeacher'
 
 function App() {
 
@@ -37,6 +39,7 @@ function App() {
 
        {/* Code divide by 5 Section !*/}
     {/* Fronted Lead AMMAR AHMED! */}
+
     {/* First Section Home Pages Made By Owais Raza ! */}
     <Route path='/' element={ <Home/> } ></Route>
     <Route path='/login' element={ <Login/> } ></Route>
@@ -44,9 +47,8 @@ function App() {
     <Route path='/headerhome' element={ <Header/> } ></Route>
     <Route path='/sidebarhome' element={ <Sidebar/> } ></Route>
     {/* Completed First Section. */}
-    <Route path='/student' element={ <Student/> } ></Route>
 
-     {/* Fourth Section TEACHER Workflow  Made By Ammar Ahmed & Aaqib khan ! */}
+     {/* Second Section TEACHER Workflow  Made By Ammar Ahmed! */}
      <Route path='/teacherdashboard' element={<TeacherDashboard/>}></Route>
     <Route path='/teacherheader' element={<TeacherHeader/>}></Route>
     <Route path='/teacherSidebar' element={<TeacherSidebar/>}></Route>
@@ -54,14 +56,18 @@ function App() {
     <Route path='/teacherassignments' element={<TotalAssignmentsPage/>}></Route>
     <Route path='/teacheralerts' element={<TeacherAlert/>}></Route>
 
-    {/* Completed Fourth Section. */}
+    {/* Completed Second Section. */}
 
-     {/* Admin Section */}
+     {/* Third Section Student Workflow  Made By Aaqib Khan! */}
+    <Route path='/student' element={ <Student/> } ></Route>
+    {/* Completed Third Section. */}    
 
+     {/* Four Section Admin Section Made By Ammar Ahmed ! */}
       <Route path='/Admin' element={<AdminHome/>}></Route>
       <Route path='/adminheader' element={<AdminHeader/>}></Route>
       <Route path='/adminsidebar' element={<AdminSidebar/>}></Route>
       <Route path='/teacherlist' element={<TeacherList/>}></Route>
+      <Route path='/addteacher' element={<AddTeacherForm/>}></Route>
       <Route path='/teacher/:teacherId' element={<TeacherDetail/>}></Route>
       <Route path='/Studentlist' element={ <Studentlist/> }></Route>
       <Route path="/student/:id" element={<StudentDetailPage />} />
@@ -70,8 +76,12 @@ function App() {
     <Route path="/course/:courseId/batch/:batchId/sections" element={<SectionList/>} />
     <Route path='/addcourse' element={ <AddCourseForm/> } ></Route>
     <Route path='/addbatch' element={<AddBatchForm/>}></Route>
+    <Route path='/addsection' element={<AddSectionForm/>}></Route>
     <Route path='/alerts' element={ <Alert/> } ></Route>
     <Route path='/adminalert' element={<AdminAlert/>}></Route>
+    {/* Completed Four Section. */}
+    
+  
     </Routes>
     </BrowserRouter>
     

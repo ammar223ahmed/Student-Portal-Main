@@ -42,9 +42,9 @@ const Signup = () => {
   return (
     <div className='signupParent'>
     <Header   OpenSidebar={OpenSidebar} />
-    <Sidebar  openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} />
+    {/* <Sidebar  openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} /> */}
     <div className='signup-main-parent'>
-    <div className="form-container ">
+    <div className="form-container signUpContainer" >
       <form className="teacher-form" onSubmit={handleSubmit}>
       <div className="form-group">
           <label htmlFor="email"> Name</label>
@@ -103,8 +103,9 @@ const Signup = () => {
             required
           />
         </div>
-        <div className='add-teacher-btn-parent'>
-        <button type="submit" className="add-teacher-submit-btn">
+        <div className='add-teacher-btn-parent mt-8'>
+          
+        <button type="submit" className="add-teacher-submit-btn mt-8">
           Sign Up
         </button>
         </div>

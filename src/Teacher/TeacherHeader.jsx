@@ -18,7 +18,7 @@ function TeacherHeader({ OpenSidebar }) {
         <BsJustify className="icon" onClick={OpenSidebar} />
       </div>
       <div className="header-left flex">
-        <h2>SMIT MANAGEMENT SYSTEM</h2>
+        <h2 className='text-white mt-4'>SMIT MANAGEMENT SYSTEM</h2>
       </div>
       <div className="header-right flex gap-2">
         {user ? (

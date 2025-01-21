@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaBook } from 'react-icons/fa';
+// import { FaBook } from 'react-icons/fa';
 import 
 {BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, 
   BsListCheck, BsMenuButtonWideFill, BsFillGearFill}

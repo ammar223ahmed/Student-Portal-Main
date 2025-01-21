@@ -108,13 +108,18 @@ const SectionPage = () => {
       <AdminSidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} />
       <div className="section-page">
         {/* <h2 className="font-bold">Sections</h2> */}
-
+      <br /><br />
         {/* Merge Sections Feature */}
         <div className="merge-section">
           <h2>Select sections to merge:</h2>
           <button onClick={mergeSections} className="merge-btn">Merge Selected Sections</button>
         </div>
-        <br /><br />
+        
+          <div className='addcource-btn-parent'>
+              <Link to='/addsection' className='add-course'>Add New Section ↓</Link>
+               </div>  
+
+        <br />
         <div className="sections-container">
           {sections.map((section) => (
             <div key={section.id} className="section-card">

@@ -1,6 +1,7 @@
+
 /* Home Section Styling */
 
-@tailwind base;
+@tform-containerilwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -50,9 +51,11 @@ body {
   margin-left: 30px;
   margin-top: 10px;
   cursor: pointer;
+  display: none;
 }
 
-/* .grid-container {
+
+.grid-container {
   display: grid;
   grid-template-columns: 260px 1fr;
   grid-template-rows: 0.2fr 3fr;
@@ -60,7 +63,7 @@ body {
       'sidebar header'
       'sidebar main';
   height: 100vh;
-} */
+}
 
 .header {
   grid-area: header;
@@ -201,6 +204,16 @@ body {
   .header {
       width: 100%; /* Full width on small screens */
   }
+
+  .close_icon {
+    color: red;
+    margin-left: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: bl;
+  }
+  
+
 }
 
 /* Small screens (<= 768px) */
@@ -249,7 +262,7 @@ body {
   /* width: 100%; */
   /* background-color: #1677ff; */
   /* height: 100vh; */
-  margin-left: 16em;
+  /* margin-left: 16em; */
   padding-top: 10px;
 }
 
@@ -361,31 +374,43 @@ body {
 }
 
 
-
+.signUpContainer{
+  margin-top: -7em;
+}
 
 .form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   min-height: 100vh;
   background-color: #cce1ff;
+  padding-top: 5em;
+
+    
 }
 
 .form-group {
   margin-bottom: 15px;
+  display: flex;
 }
+
+
 
 .form-group{
   display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  padding-left: 16.8em;
-  justify-content: space-between;
+  /* padding-left: 16.8em; */
+  /* justify-content: space-around; */
   gap: 40px;
   margin: 30px;
+
 
 }
 
 .form-group input{
-  width: 50%;
+  width: 100%;
   padding: 15px 25px;
   border-radius: 7px;
   border: 2px solid #001529;
@@ -401,7 +426,7 @@ body {
 
 .form-group label{
   font-family:Arial, Helvetica, sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   font-style: oblique;
   align-items: center;
@@ -517,6 +542,9 @@ font-size: 1.5em;
   background-color: darkred;
 }
 
+.header-home{
+  width: 100%;
+}
 
 
 
@@ -1402,6 +1430,7 @@ body {
 /* Student Table */
 .student-table-container {
   overflow-x: auto;
+  /* width: 100%; */
 }
 
 .student-table {
@@ -1844,3 +1873,4 @@ h2, h3 {
     margin-bottom: 10px;
   }
 }
+

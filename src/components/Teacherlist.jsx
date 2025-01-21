@@ -105,7 +105,7 @@
 
 
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AdminHeader from "../Admin/AdminHeader";
 import AdminSidebar from "../Admin/AdminSidebar";
 // import "./app.css";
@@ -138,6 +138,9 @@ const TeacherList = () => {
     <br /><br />
     <div className="teacher-list-container">
       <h2 className="font-bold">Teacher List</h2>
+      <div className='addcource-btn-parent'>
+       <Link to='/addteacher' className='add-course'>Add New Teacher ↓</Link>
+         </div>   
       <table className="teacher-table">
         <thead>
           <tr>
